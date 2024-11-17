@@ -1,4 +1,3 @@
-
 "use client"
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -17,6 +16,10 @@ const Navbar = () => {
         {
             title: "Service",
             path: '/service',
+        },
+        {
+            title: "Blogs",
+            path: '/blogs',
         }
     ]
     return (
@@ -28,7 +31,7 @@ const Navbar = () => {
                     links.map((link) => <Link className={`${pathName === link.path ? 'text-red-300 font-bold' : ''}`} key={link.path} href={link.path}>{link.title}</Link>)
                 }
             </ul>
-            <button onClick={()=> router.push('/login')}>Login</button>
+            <button className='btn' onClick={()=> router.push('/login')}>Login</button>
         </div>
     );
 };
