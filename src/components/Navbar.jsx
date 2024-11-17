@@ -22,6 +22,11 @@ const Navbar = () => {
             path: '/blogs',
         }
     ]
+
+    if (pathName.includes('dashboard'))
+        return (
+            <div className='bg-green-300'>Dashboard Layout</div>
+        )
     return (
         <div className="bg-cyan-300 px-5 py-5 flex justify-between items-center">
 
@@ -31,7 +36,7 @@ const Navbar = () => {
                     links.map((link) => <Link className={`${pathName === link.path ? 'text-red-300 font-bold' : ''}`} key={link.path} href={link.path}>{link.title}</Link>)
                 }
             </ul>
-            <button className='btn' onClick={()=> router.push('/login')}>Login</button>
+            <button className='btn' onClick={() => router.push('/login')}>Login</button>
         </div>
     );
 };
