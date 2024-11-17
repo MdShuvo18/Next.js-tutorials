@@ -21,15 +21,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <nav>
+        <nav className="bg-cyan-300 px-5 py-5">
           <h4>Logo</h4>
           <ul>
             <li>About</li>
             <li>Service</li>
           </ul>
         </nav>
-        {children}
-        <footer>
+        <div className="min-h-screen">
+          {children}
+        </div>
+        <footer className="bg-cyan-300 px-5 py-5">
           This is my Footer
         </footer>
       </body>
