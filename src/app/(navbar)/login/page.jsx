@@ -1,10 +1,9 @@
 import React from 'react';
 
-const page = ({ params }) => {
-    // console.log({params});
+const page = () => {
     return (
         <div>
-            Categories details page
+            this is login page
         </div>
     );
 };
