@@ -34,6 +34,11 @@ const Navbar = () => {
             path: '/posts',
         },
         
+        {
+            title: "Gallery",
+            path: '/gallery',
+        },
+        
     
     ]
 

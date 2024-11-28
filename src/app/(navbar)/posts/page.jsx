@@ -2,7 +2,11 @@ import { getPosts } from '@/shared/getPosts';
 import Link from 'next/link';
 import React from 'react';
 
-
+export const metadata = {
+    title: "All Posts",
+    description: "This is all posts",
+    keywords:["posts","all posts"]
+  };
 const page = async () => {
     const posts = await getPosts();
     // console.log(posts);
